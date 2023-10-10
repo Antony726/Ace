@@ -54,7 +54,7 @@ const slideCount = {
        
 
       }
-      else if(activePage==="technical"){
+      if(activePage==="technical"){
         slides[i].src = 'csoon.png';
         
       }
