@@ -1,0 +1,92 @@
+.page {
+    /* min-height: 90vh; */
+    display: flex;
+    flex-flow: column nowrap;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 1em;
+}
+
+.page img {
+    width: 15em;
+    margin: 2em;
+}
+
+.header {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 800;
+    color: var(--kratos-white-dull);
+}
+
+.fid {
+    font-size: 1rem;
+}
+
+.subtext {
+    line-height: 3em;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 2em 0;
+}
+
+.instruction {
+    color: var(--kratos-white-dull);
+    font-size: 2em;
+}
+
+.amount {
+    font-size: 1.5em;
+    color: var(--kratos-red);
+}
+
+.mobile {
+    font-size: 3em;
+    color: var(--kratos-red);
+}
+
+.page .qr-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--kratos-white-dull);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* margin: 1em 0; */
+}
+
+.upload-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #e9e9ed;
+    border-radius: .4em;
+    box-shadow: 2.5px 2.5px 2px var(--kratos-red);
+    color: var(--kratos-red);
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    height: 2.5em;
+    min-width: 8em;
+    padding: 0 .5em;
+}
+
+.upload-button img {
+    margin: 0;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right:.5em;
+}
+
+.label {
+    width: 100%;
+    text-align: center;
+    margin: .2em 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .page {
+        padding-top: 5em;
+    }
+}

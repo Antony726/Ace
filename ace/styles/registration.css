@@ -1,0 +1,548 @@
+input {
+    width: 100%;
+    border: 2px solid var(--kratos-white-dull);
+    border-radius: .4em;
+    padding: 0.3rem 0.5rem;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: var(--kratos-red);
+  }
+  
+  .college-switch {
+    overflow: hidden;
+    border: 2px solid var(--kratos-white-dull);
+    border-radius: .75em;
+    margin: 1em 0 .5em;
+    display: flex;
+    flex-flow: row nowrap;
+    min-height: 3em;
+    font-size: 1em;
+  }
+  
+  button{
+    border: none;
+  }
+  
+  .college-switch .switch-option {
+    transition: background-color .1s linear;
+    opacity: 0.3;
+    font-weight: 600;
+    width: 50%;
+    color: var(--kratos-red);
+    background-color: var(--kratos-black);
+    padding: 0.3rem 0.5rem;
+  }
+  
+  .college-switch .switch-option:hover {
+    opacity: 1;
+    background-color: var(--kratos-white-dull);
+    color: var(--kratos-red);
+  }
+  
+  .college-switch .switch-active {
+    opacity: 1;
+    font-weight: 600;
+    width: 50%;
+    color: var(--kratos-red);
+    background: var(--kratos-white);
+    padding: 0.3rem 0.5rem;
+  }
+  
+  .reg-button {
+    user-select: none;
+    cursor: auto;
+    font-weight: 600;
+    align-items: center;
+    border-radius: 0.25em;
+    display: none;
+    font-family: "Chakra Petch", "Consolas", "Courier New", Courier, monospace;
+    font-size: 1.2rem;
+    height: 2.9em;
+    justify-content: center;
+    margin: 0 0 2em;
+    opacity: 0;
+    padding: .3em 1em;
+    text-decoration: none;
+    transition: all var(--kratos-card-trans-dur) ease;
+  }
+  
+  .reg-button-active {
+    color: var(--kratos-black);
+    background-color: var(--kratos-white);
+    cursor: pointer;
+  }
+  
+  .reg-button-inactive {
+    border: 3px solid var(--kratos-white);
+    color: var(--kratos-white);
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  .reg-button-label {
+    display: inline;
+    margin-right: 1em;
+  }
+  
+  .reg-button a {
+    text-decoration: none;
+    color: var(--kratos-white);
+  }
+  
+  .page {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 1em;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 6em;
+    margin: 2em 0;
+  }
+  
+  .page>blockquote {
+    margin: 1em 0 2em;
+  }
+  
+  .page>blockquote p {
+    font-size: 3em;
+  }
+  
+  .page .section {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 2em;
+    width: 100%;
+  }
+  
+  .page .section-header {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  
+  .page .section-header h4 {
+    text-align: center;
+    color: var(--kratos-white-dull);
+    font-size: 1.3em;
+    font-weight: 300;
+  }
+  
+  .page .section-header h5 {
+    display: flex;
+    align-items: center;
+    color: var(--kratos-white-dull);
+    opacity: .9;
+    font-size: 1.1em;
+    font-weight: 300;
+    margin: .5em 0;
+  }
+  
+  h5 .info-icon {
+    font-size: 1.5em;
+    margin-right: .5em;
+    color: inherit;
+    background-color: inherit;
+  }
+  
+  .page .section-header h3 {
+    font-family: 'Chakra Petch', monospace;
+    color: var(--kratos-red);
+    margin: .3em 0;
+    font-size: 3em;
+  }
+  
+  .event-list {
+    display: flex;
+    gap: 1em;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: var(--kratos-white-dull);
+    margin: 1em 0;
+    width: 90%;
+  }
+  
+  .event-list-item {
+    user-select: none;
+    text-align: center;
+    border-radius: .2em;
+    background-color: var(--kratos-white-dull);
+    color: var(--kratos-black);
+    min-width: 8em;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: .2em 1em;
+  }
+  
+  .form-title-hr {
+    width: 90%;
+    background-color: var(--kratos-red);
+    height: 1.7px;
+    margin: .5em 0 1em;
+  }
+  
+  .form-title {
+    color: var(--kratos-red);
+    padding-left: 1em;
+    width: 97%;
+    font-size: 2em;
+    margin: 1em 0 0;
+  }
+  
+  .page form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 2em;
+  }
+  
+  .page form label {
+    color: var(--kratos-white);
+    font-size: 1.2em;
+    margin: 1em 0 .5em;
+  }
+  
+  .page form input {
+    background: var(--kratos-grey-light);
+    font-size: 1.1em;
+    padding: 0 1em;
+    color: var(--kratos-white);
+    width: 100%;
+    height: 4em;
+  }
+  
+  .page form input:focus,
+  .page form input:active {
+    background: var(--kratos-black);
+  }
+  
+  .page form input:disabled {
+    cursor: not-allowed;
+    border: 2px solid grey;
+  }
+  
+  .prog-bar {
+    overflow-x: scroll;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    border-bottom: 2px double var(--kratos-white-dull);
+    width: 100%;
+  }
+  
+  .prog-tab {
+    color: var(--kratos-grey-light);
+    background: var(--kratos-white-dull);
+    padding: .2em 1em;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5em;
+    margin: 0 1em;
+  }
+  
+  .prog-tab-active {
+    background-color: var(--kratos-red);
+    color: var(--kratos-white-dull);
+  }
+  
+  .page form .next-button,
+  #soloFormNext {
+    align-self: flex-end;
+    background: #e9e9ed;
+    border-radius: .4em;
+    box-shadow: 2.5px 2.5px 2px var(--kratos-red);
+    color: var(--kratos-red);
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    height: 3em;
+    margin: 2em .5em;
+    width: 8em;
+  }
+  
+  .submit-button {
+    align-self: flex-end;
+    background: #e9e9ed;
+    border-radius: .4em;
+    box-shadow: 2.5px 2.5px 2px var(--kratos-red);
+    color: var(--kratos-red);
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    height: 3em;
+    margin: 1em .5em 2em;
+    width: 8em;
+  }
+  
+  .page form input[type='checkbox'] {
+    accent-color: var(--kratos-red);
+    width: 1.2em !important;
+    height: 1.2em !important;
+  }
+  
+  .checkbox-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+  }
+  
+  .checkbox-row label {
+    margin: 0 1em !important;
+  }
+  
+  .team-event-title {
+    font-weight: 600;
+    font-size: 1.2em;
+  }
+  
+  .image-container {
+    margin: 2em;
+    padding: 2em;
+    display: flex;
+    /* justify-content: inherit; */
+    /* justify-content: space-around; */
+    background-color: var(--kratos-grey-lighter);
+    width: 30vw;
+    height: 30vw;
+    border-radius: 1em;
+  
+  }
+  
+  .image-container>img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+  }
+  
+  .checkbox-info {
+    margin: 0 1.2em;
+    color: var(--kratos-warn);
+  }
+  
+  .review-solo-event-top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    border: 1px solid var(--kratos-grey-light);
+    background: var(--kratos-grey-lighter);
+    color: var(--kratos-white-dull);
+    font-size: 1.1em;
+    font-weight: 600;
+    font-family: 'Chakra Petch', monospace;
+    border-radius: .5em;
+    width: 90%;
+    height: 3em;
+    padding: .1em 1em;
+  }
+  
+  .review-solo-event-top .event-title,
+  .review-team-event-top .event-title {
+    width: 80%;
+  }
+  
+  .review-team-event-top .fee,
+  .review-solo-event-top .fee {
+    width: 20%;
+  }
+  
+  .review-team-event-top .remove-button,
+  .review-solo-event-top .remove-button {
+    cursor: pointer;
+    display: flex;
+    width: .7em;
+    height: .7em;
+  }
+  
+  .review-team-event {
+    font-family: 'Chakra Petch', monospace;
+    margin: .5em 0;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 90%;
+    background-color: var(--kratos-white-dull);
+    border-radius: 1em;
+    border-style: none;
+    overflow: hidden;
+  }
+  
+  .review-team-event-top {
+    /* border-radius: 1em; */
+    align-items: center;
+    background: var(--kratos-grey-lighter);
+    color: var(--kratos-white-dull);
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 1.1em;
+    font-weight: 600;
+    height: 3em;
+    justify-content: flex-end;
+    padding: .5em 1em;
+    width: 100%;
+  }
+  
+  .review-team-event-details {
+    color: var(--kratos-grey-dark);
+    display: flex;
+    flex-direction: row;
+    padding: 1em 1em 1em 10%;
+  }
+  
+  .review-team-event-details .contacts {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 50%;
+  }
+  
+  .review-team-event-details .label {
+    color: var(--kratos-red);
+    font-size: .9em;
+  }
+  
+  .review-team-event-details .contacts .contact-detail {
+    font-size: 1.1em;
+    /* color: var(--kratos-white); */
+    margin-bottom: .5em;
+  }
+  
+  
+  .review-team-event-details .team-names {
+    /* overflow: hidden; */
+    display: flex;
+    flex-flow: column nowrap;
+    width: 50%;
+  }
+  
+  .total-amount {
+    color: var(--kratos-white);
+    font-size: 1.2em;
+    width: 100%;
+    padding: 0 1em;
+    text-align: right;
+  }
+  
+  .reg-modal-container {
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+  }
+  
+  .reg-modal-card {
+    display: flex;
+    flex-flow: column nowrap;
+    /* justify-content: space-around; */
+    box-shadow: 0 -8px 8px rgba(0, 0, 0, .5);
+    min-height: 30%;
+    width: 100%;
+    background-color: var(--kratos-grey-dark);
+    padding: 1em;
+  }
+  
+  .reg-modal-card .header {
+    margin: 1em 0 .5em;
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Chakra Petch', monospace;
+    color: var(--kratos-white);
+  
+  }
+  
+  .reg-modal-card .button-container {
+    margin: 1em 0;
+  }
+  
+  .reg-modal-card .event-name {
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Chakra Petch', monospace;
+    color: var(--kratos-red);
+  
+  }
+  
+  .reg-modal-card .close-button {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    display: flex;
+    width: 100%;
+    height: 1.5em;
+  }
+  
+  .reg-modal-card .close-button img {
+    cursor: pointer;
+    width: 1.5em;
+    height: 1.5em;
+  }
+  
+  
+  @media only screen and (min-width: 768px) {
+  
+    form {
+      max-width: 40vw;
+    }
+  
+    .form-title {
+      width: 40vw;
+    }
+  
+    .form-title-hr {
+      width: 40vw;
+    }
+  
+    .image-container {
+      width: 10vw;
+      height: 10vw;
+      /* object-fit: cover; */
+    }
+  
+  
+    .submit-button {
+      margin: 2em 5%;
+    }
+  
+    .college-input-easwari {
+      font-size: 0.7em;
+      height: 4em;
+    }
+  
+    .college-input-other-college {
+      font-size: 1em;
+      height: 4em;
+    }
+  
+    .page {
+      padding: 5em 10%;
+    }
+  
+    .reg-button {
+      height: 4em;
+      font-size: 1.2em;
+      margin: 0 0 2em;
+    }
+  
+    .page .section {
+      width: 40vw;
+    }
+  
+    .reg-modal-card {
+      width: 50%;
+    }
+  }

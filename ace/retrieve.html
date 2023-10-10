@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Retrieve | Kratos 2023</title>
+  <link rel="icon" href="https://storage.googleapis.com/kratos23.com/images/kratos_logo.png">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="styles/common.css">
+  <link rel="stylesheet" type="text/css" href="styles/tech.css">
+  <link rel="stylesheet" type="text/css" href="styles/retrieve.css">
+
+  <script rel="script" type="text/javascript" src="scripts/retrieve.js" defer></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark " id="nav">
+    <a class="navbar-brand " href="/">
+      <img class="navLogo " src="https://storage.googleapis.com/kratos23.com/images/kratos_logo.png" />
+      <div class="brand-name">KRATOS</div>
+    </a>
+  </nav>
+  <div class="page">
+    <div class="header">Submitted Forms (<span id="count"></span>)</div>
+    <div class="filter-box">
+      <h4>Filter</h4>
+      <div class="filter-option">
+        <label for="event">Event:</label>
+        <select id="event" onchange="updateFilter()">
+          <option value="">All Events</option>
+          <optgroup label="Technical">
+            <option value="paper_presentation">Paper Presentation</option>
+            <option value="css_wars">CSS Wars</option>
+            <option value="bug_off">Bug Off</option>
+            <option value="code_play">Code Play</option>
+            <option value="pair_programming">Pair Programming</option>
+          </optgroup>
+          <optgroup label="Non-Technical">
+            <option value="gaming_fifa">Gaming - Fifa</option>
+            <option value="futsal">Futsal</option>
+            <option value="cine_quiz">Cine Quiz</option>
+            <option value="squid_game">Squid Game</option>
+            <option value="channel_surfing">Channel Surfing</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="filter-option">
+        <input id="paidOnly" type="checkbox" onchange="updateFilter()">
+        <label for="paidOnly">Show only paid forms</label>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>College</th>
+          <th>Email</th>
+          <th>Mobile</th>
+          <th>Payment Screenshot</th>
+          <th>Solo Events</th>
+          <th colspan="2">Team Events</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+      </tbody>
+    </table>
+  </div>
+  <footer id="myFooter" class=" text-center text-lg-start" style="background-color: black;">
+    <div class="footer-elements">
+
+      <div class="footer-top">
+        <div class="ig-section">
+          <div class="insta-logo">
+            <button type="button" class="btn btn-light btn-lg  insta-logo-align"
+              onclick="javascript:location.href='https://www.instagram.com/_kratos23/?igshid=YmMyMTA2M2Y%3D'">
+              <i class="fab fa-instagram "></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="contact  ">
+          <div class="footer-header">Contact</div>
+          <div class="footer-info">
+            <p class="footer-content-type ">For event queries</p>
+            <p class="footer-content">Prakashraj | 7299970572</p>
+            <p class="footer-content">Rohidh G.C | 9444461006</p>
+          </div>
+        </div>
+      </div>
+      <div id="copyright">
+        © 2022-23 Copyright ACE
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script src="https://unpkg.com/axios@0.27.2/dist/axios.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+  integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/b460e0b985.js" crossorigin="anonymous"></script>
+
+</html>

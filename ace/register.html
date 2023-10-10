@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registration | Kratos 2023</title>
+  <link rel="icon" href="https://storage.googleapis.com/kratos23.com/images/kratos_logo.png">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="styles/common.css">
+  <link rel="stylesheet" type="text/css" href="styles/tech.css">
+  <link rel="stylesheet" type="text/css" href="styles/registration.css">
+
+  <script rel="script" type="text/javascript" src="scripts/eventLoader.js" defer></script>
+  <script rel="script" type="text/javascript" src="scripts/registration.js" defer></script>
+  <script rel="script" type="text/javascript" src="scripts/registrationForm.js" defer></script>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark " id="nav">
+    <a class="navbar-brand " href="/">
+      <img class="navLogo " src="https://storage.googleapis.com/kratos23.com/images/kratos_logo.png" />
+      <div class="brand-name">KRATOS</div>
+    </a>
+  </nav>
+
+  <div class="page">
+    <blockquote class="blockquote" id="blockQuote">
+      <p class="m-1 text-white-50"><strong>REGISTRATION</strong></p>
+    </blockquote>
+
+    <!-- needs to be dynamically loaded for team events -->
+    <!-- <div class="prog-bar">
+      <div class="prog-tab">1 Solo Events</div>
+      <div class="prog-tab">2</div> 
+      <div class="prog-tab">3</div>
+      <div class="prog-tab">4</div>
+    </div> -->
+
+    <div class="section" id="soloSection">
+      <div class="section-header">
+        <h3>Solo Events</h3>
+        <h4>You're registering yourself for:</h4>
+        <div class="event-list"></div>
+        <h5>
+          <div class="info-icon">ℹ️</div>Team events will will be in the next pages
+        </h5>
+      </div>
+
+      <div class="form-title">Your Details</div>
+      <div class="form-title-hr"></div>
+
+      <form id="soloForm">
+        <div>
+          <label>Full Name</label>
+          <input id="formName" type="text" name="full_name" placeholder="e.g. Joe Mama" autocomplete="name" size="30"
+            minlength="3" pattern="^[A-Za-z]+((\s)?(('|-|\.)?([A-Za-z])+))*\s*?$" required />
+        </div>
+        <div>
+          <label>College</label>
+          <div class="college-switch">
+            <button id="easwariOption" class="switch-option switch-active" type="button" onclick="onclickEaswari()">
+              Easwari Engineering College
+            </button>
+            <button id="otherOption" class="switch-option" type="button" onclick="onclickotherCollege()">
+              Other College</button>
+          </div>
+          <input id="formCollege" type="text" name="college_name" placeholder="e.g. SRM IST Ramapuram"
+            value="Easwari Engineering College" minlength="3" pattern="^[A-Za-z]+((\s)?(('|-|\.)?([A-Za-z])+))*\s*?$"
+            style="display: none;" required />
+        </div>
+        <div>
+          <label>Email</label>
+          <input id="formEmail" type="email" name="email" placeholder="e.g. user@example.com" autocomplete="email"
+            required pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$" />
+        </div>
+        <div>
+          <label>Phone Number</label>
+          <input id="formMobile" type="text" name="mobile" placeholder="e.g. 1234567890" autocomplete="mobile" required
+            pattern="^[0-9]{10}$" />
+        </div>
+        <button id='soloFormNext' type="button" class="next-button" onclick="toTeamEvents()">Next</button>
+      </form>
+    </div>
+
+
+
+
+  </div>
+
+  <footer id="myFooter" class=" text-center text-lg-start" style="background-color: black;">
+    <div class="footer-elements">
+
+      <div class="footer-top">
+        <div class="ig-section">
+          <div class="insta-logo">
+            <button type="button" class="btn btn-light btn-lg  insta-logo-align"
+              onclick="javascript:location.href='https://www.instagram.com/_kratos23/?igshid=YmMyMTA2M2Y%3D'">
+              <i class="fab fa-instagram "></i>
+            </button>
+
+          </div>
+        </div>
+
+        <div class="contact">
+          <div class="footer-header">Contact</div>
+          <div class="footer-info">
+            <p class="footer-content-type ">For event queries</p>
+            <p class="footer-content">Prakashraj | 7299970572</p>
+            <p class="footer-content">Rohidh G.C | 9444461006</p>
+          </div>
+        </div>
+      </div>
+      <div id="copyright">
+        © 2022-23 Copyright ACE
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+<script src="https://unpkg.com/axios@0.27.2/dist/axios.min.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+  integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/b460e0b985.js" crossorigin="anonymous"></script>
+
+</html>

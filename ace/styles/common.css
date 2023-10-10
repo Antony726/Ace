@@ -1,0 +1,28 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+/* @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap"); */
+/* @import url('https://fonts.cdnfonts.com/css/blanka'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
+
+@font-face{
+  font-family: 'custom-font-blanka';
+  src:url('https://storage.googleapis.com/kratos23.com/Blanka-Regular.woff');
+  }
+
+:root {
+  --kratos-red-lighter: rgb(212, 101, 112);
+  --kratos-red: rgb(220, 53, 69);
+  --kratos-red-darker: rgb(161, 39, 51);
+  --kratos-black: black;
+  --kratos-grey-dark:rgb(30, 30, 30
+  );
+  --kratos-grey-light: rgba(17, 16, 16, 1);
+  --kratos-grey-lighter: rgb(36, 35, 35);
+  /* --kratos-grey-lightest: #6c757d; */
+  --kratos-grey-lightest: #8d8d8d;
+  /* --kratos-grey-lightest: #646464; */
+  --kratos-white-dull: #ccc;
+  --kratos-white: white;
+  --kratos-card-trans-dur: .3s;
+  --kratos-warn: wheat;
+}

@@ -1,0 +1,68 @@
+.page {
+    min-height: 90vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-card {
+    border: 5px solid black;
+    border-radius: 2em;
+    box-shadow: 1.5px 1.5px var(--kratos-red);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    min-width: 60vw;
+    max-width: 90vw;
+    height: 50vh;
+    background-color: var(--kratos-grey-lighter);
+    padding: 3em;
+  }
+  
+  .img-container {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    width: 100%;
+    height: 30%;
+  }
+  
+  .main-card h3 {
+    margin: 2em 0em 0em;
+    font-family: 'Chakra Petch', monospace;
+    color: var(--kratos-red);
+    margin: 1em 0;
+    font-size: 2em;
+    text-align: center;
+  }
+  
+  .main-card h4 {
+    color: var(--kratos-white-dull);
+    text-align: center;
+  }
+  
+  .main-card h5 {
+    color: var(--kratos-white-dull);
+    text-align: center;
+  }
+  
+  .next-button {
+    background: #e9e9ed;
+    border-radius: .4em;
+    box-shadow: 2.5px 2.5px 2px var(--kratos-red);
+    color: var(--kratos-red);
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    height: 2.5em;
+    padding: 0 1em;
+    margin: 2em 0;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .page {
+      min-height: 100vh;
+    }
+  }

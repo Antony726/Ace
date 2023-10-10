@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+.slideshow-container {
+  display: none;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  width: 90vw;
+  max-width: 97%;
+  background-color: var(--kratos-black);
+  border-radius: 10px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.slideshow-container::-webkit-scrollbar {
+  display: none;
+}
+
+.slideshow-markers {
+  display: none;
+  width: 100%;
+  height: auto;
+  margin-top: 0.5em;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.marker {
+  order: 1;
+  cursor: pointer;
+  height: 9px;
+  width: 15px;
+  border-radius: 2px;
+  background-color: var(--kratos-grey-lightest);
+  transition: background-color 0.2s linear;
+  opacity: .9;
+}
+
+.marker:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.marker:active {
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.slide {
+  z-index: 0;
+  height: 100%;
+  width: inherit;
+  scroll-snap-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slideshow-button {
+  /* background-color: var(--kratos-grey-lightest); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  color: var(--kratos-white);
+  font-weight: 400;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: sans-serif;
+  cursor: pointer;
+  font-size: 1em;
+  height: 15px;
+  scale: 1.25;
+  line-height: 15px;
+  position: absolute;
+  text-align: center;
+  transition: background-color 0.2s linear;
+  width: 15px;
+  user-select: none;
+}
+
+.slideshow-button-right {
+  right: 10%;
+}
+
+.slideshow-button-left {
+  left: 10%;
+}
+
+@media only screen and (min-width: 768px) {
+  .slideshow-container {
+    border-radius: 25px;
+    min-height: 42vw;
+    height: 42vw;
+    min-width: 74vw;
+    width: 74vw;
+  }
+
+  .slideshow-markers {
+    padding-top: 1em;
+  }
+
+  .slideshow-button-right {
+    margin-left: 3em;
+    order: 2;
+  }
+
+  .slideshow-button-left {
+    margin-right: 3em;
+    order: 0;
+  }
+
+  .slideshow-button {
+    position: static;
+    scale: 2;
+  }
+}

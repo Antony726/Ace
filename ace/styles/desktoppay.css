@@ -1,0 +1,14 @@
+.page {
+    min-height: 90vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+    .page {
+        padding-top: 5em;
+    }
+}
